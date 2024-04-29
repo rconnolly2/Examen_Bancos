@@ -32,8 +32,8 @@ public abstract class CuentaBancaria {
             System.err.println("Cantidad no valida...");
         }
     }
-
-    public void retirar(Double cant) {
+    // Coreccion Maximo
+    private void retirar(Double cant) {
         if (this.saldo >= cant) {
             this.saldo -= cant;
             System.out.println("Retirada de: "+this.saldo+"Eur");
